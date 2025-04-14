@@ -1,6 +1,5 @@
 import argparse
 from pathlib import Path
-import pdb
 from typing import List, Dict, Any
 
 from analyzer import LogAnalyzer
@@ -48,7 +47,6 @@ def main():
         log_files = validate_files(args["log_files"])
 
         report_class = get_report_class(args["report"])
-        pdb.set_trace()
         if report_class is None:
             available_reports = ", ".join(get_available_reports())
             raise ValueError(
